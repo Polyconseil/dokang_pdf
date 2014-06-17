@@ -1,0 +1,7 @@
+Change log
+==========
+
+dokang_pdf 0.1.0
+----------------
+
+Initial version. Not yet released.
