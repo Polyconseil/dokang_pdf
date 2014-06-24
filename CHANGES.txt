@@ -1,7 +1,8 @@
 Change log
 ==========
 
-dokang_pdf 0.1.0
-----------------
 
-Initial version. Not yet released.
+dokang_pdf 0.1.0 (2014-06-24)
+-----------------------------
+
+Initial version.
