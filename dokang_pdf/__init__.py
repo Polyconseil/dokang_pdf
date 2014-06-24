@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2011-2014 Polyconseil SAS. All rights reserved.f
 
+from __future__ import unicode_literals
+
 import logging
 from StringIO import StringIO
 
@@ -58,4 +60,6 @@ class PdfHarvester(Harvester):
                 content = content.decode(encoding, 'ignore')
         return {
             'title': title,
-            'content': content}
+            'content': content,
+            'kind': 'PDF',
+        }
