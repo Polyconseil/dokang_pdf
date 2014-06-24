@@ -2,7 +2,7 @@ Change log
 ==========
 
 
-dokang_pdf 0.1.0 (2014-06-24)
+dokang_pdf 0.2.0 (2014-06-24)
 -----------------------------
 
 Initial version.
