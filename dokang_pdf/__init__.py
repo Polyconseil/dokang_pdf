@@ -13,7 +13,7 @@ from pdfminer.layout import LAParams
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
-from pdfminer.pdfdocument import PDFDocument    
+from pdfminer.pdfdocument import PDFDocument
 from pdfminer.pdftypes import PDFObjRef
 
 
