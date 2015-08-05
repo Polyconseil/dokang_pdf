@@ -1,9 +1,12 @@
 include LICENSE.txt README CHANGES.txt
 include requirements*.txt
 
-include docs/Makefile
-recursive-include docs *.py *.rst
-include docs/_static/.keep_dir
-prune docs/_build
+ graft dokang_pdf
 
-recursive-include *.py
+ prune docs
+ prune tests
+
+ global-exclude .py[cod] __pycache__ .so
+
+ exclude Makefile
+ exclude release.conf
