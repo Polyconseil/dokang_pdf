@@ -1,14 +1,11 @@
 include LICENSE.txt README CHANGES.txt
 include requirements*.txt
-include test.pdf
-include tests.py
 
 graft dokang_pdf
-
-prune docs
-prune tests
 
 global-exclude .py[cod] __pycache__ .so
 
 exclude Makefile
 exclude release.conf
+exclude test.pdf
+exclude tests.py
