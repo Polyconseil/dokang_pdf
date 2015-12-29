@@ -8,23 +8,16 @@ _version_file = open(os.path.join(os.path.dirname(__file__), 'dokang_pdf', 'vers
 VERSION = re.compile(r"^VERSION = '(.*?)'", re.S).match(_version_file.read()).group(1)
 
 
-def load_requirements(path):
-    reqs = []
-    with open(path) as fp:
-        reqs = [line for line in fp.read().split("\n")
-            if line and not line.startswith(("-r", "#"))]
-    return reqs
+def read(filename):
+    with open(filename) as fp:
+        return fp.read()
 
-
-here = os.path.abspath(os.path.dirname(__file__))
-README = open(os.path.join(here, 'README')).read().strip()
-CHANGES = open(os.path.join(here, 'CHANGES.txt')).read().strip()
-
-setup(name='dokang_pdf',
-      version=VERSION,
-      description="PDF harvester for Dokang",
-      long_description=README + '\n\n' + CHANGES,
-      classifiers=[
+setup(
+    name='dokang_pdf',
+    version=VERSION,
+    description="PDF harvester for Dokang",
+    long_description='%s\n\n%s' % (read('README.rst'), read('CHANGES.txt')),
+    classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
         "License :: OSI Approved :: BSD License",
@@ -32,15 +25,18 @@ setup(name='dokang_pdf',
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         # PDFMiner does not support Python 3.
-        ],
-      author="Polyconseil",
-      author_email="opensource+dokang@polyconseil.fr",
-      url='',
-      keywords='full-text search engine',
-      packages=find_packages(),
-      include_package_data=True,
-      zip_safe=False,
-      install_requires=load_requirements('requirements.txt'),
-      tests_require=load_requirements('requirements_dev.txt'),
-      test_suite='tests',
-      )
+    ],
+    author="Polyconseil",
+    author_email="opensource+dokang@polyconseil.fr",
+    url='',
+    keywords='full-text search engine',
+    packages=find_packages(),
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=[
+        'dokang>=0.2.0',
+        'pdfminer==20140328',
+    ],
+    tests_require=[l for l in read('requirements_dev.txt').splitlines() if not l.startswith(('-', '#'))],
+    test_suite='tests',
+)

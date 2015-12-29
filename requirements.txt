@@ -1,2 +1,0 @@
-dokang>=0.2.0
-pdfminer==20140328
