@@ -22,7 +22,6 @@ setup(
         "Environment :: Console",
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         # PDFMiner does not support Python 3.
     ],
