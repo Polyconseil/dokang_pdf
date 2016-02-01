@@ -1,7 +1,5 @@
 This is a PDF harvester for Dokang (https://github.com/Polyconseil/dokang).
 
-It uses PDFMiner and thus does not support Python 3 yet.
-
 
 Usage
 =====

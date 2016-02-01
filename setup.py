@@ -23,7 +23,9 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
-        # PDFMiner does not support Python 3.
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
     ],
     author="Polyconseil",
     author_email="opensource+dokang@polyconseil.fr",
@@ -33,9 +35,16 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'dokang>=0.6.1',
-        'pdfminer==20140328',
+        'dokang>=0.7.0',
     ],
+    extras_require={
+        ":python_version < '3'": [
+            'pdfminer==20140328',
+        ],
+        ":python_version >= '3'": [
+            'pdfminer3k==1.3.0',
+        ],
+    },
     tests_require=[l for l in read('requirements_dev.txt').splitlines() if not l.startswith(('-', '#'))],
     test_suite='tests',
 )
