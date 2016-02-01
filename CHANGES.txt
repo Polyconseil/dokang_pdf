@@ -1,8 +1,8 @@
 Change log
 ==========
 
-Next version (not yet released)
--------------------------------
+Dokang_pdf 0.3.0
+----------------
 
 - Support of Python 3.
 
