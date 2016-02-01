@@ -38,10 +38,10 @@ setup(
         'dokang>=0.7.0',
     ],
     extras_require={
-        ":python_version < '3'": [
+        ":python_version == '2.7'": [
             'pdfminer==20140328',
         ],
-        ":python_version >= '3'": [
+        ":python_version != '2.7'": [
             'pdfminer3k==1.3.0',
         ],
     },
