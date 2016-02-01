@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import logging
 from StringIO import StringIO
 
-from dokang.harvesters import Harvester
+from dokang.harvesters.base import Harvester
 
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams

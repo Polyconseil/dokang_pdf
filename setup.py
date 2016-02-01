@@ -33,7 +33,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'dokang>=0.2.0',
+        'dokang>=0.6.1',
         'pdfminer==20140328',
     ],
     tests_require=[l for l in read('requirements_dev.txt').splitlines() if not l.startswith(('-', '#'))],
