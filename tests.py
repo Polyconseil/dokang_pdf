@@ -9,9 +9,6 @@ from unittest import TestCase
 from dokang_pdf import PdfHarvester
 
 
-print os.path.dirname(__file__)
-
-
 class TestPdfHarvester(TestCase):
 
     def test_basics(self):
