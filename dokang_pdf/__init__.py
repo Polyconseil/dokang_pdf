@@ -66,8 +66,6 @@ class PdfHarvester(Harvester):
 
     def harvest_file(self, path):
         with open(path, 'rb') as fp:
-            # FIXME: how do we know which encoding to use? Should we
-            # use 'chardet' to detect it?
             encoding = 'utf-8'
             parser = PDFParser(fp)
             if HAS_PDFMINER_3K:
