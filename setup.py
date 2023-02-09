@@ -22,11 +22,8 @@ setup(
         "Environment :: Console",
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
     ],
     author="Polyconseil",
     author_email="opensource+dokang@polyconseil.fr",
@@ -37,15 +34,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'dokang>=0.7.0',
+        'pdfminer3k>=1.3.4'
     ],
-    extras_require={
-        ":python_version == '2.7'": [
-            'pdfminer==20140328',
-        ],
-        ":python_version != '2.7'": [
-            'pdfminer3k==1.3.0',
-        ],
-    },
     tests_require=[l for l in read('requirements_dev.txt').splitlines() if not l.startswith(('-', '#'))],
     test_suite='tests',
 )
