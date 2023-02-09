@@ -16,7 +16,7 @@ setup(
     name='dokang_pdf',
     version=VERSION,
     description="PDF harvester for Dokang",
-    long_description='%s\n\n%s' % (read('README.rst'), read('CHANGES.txt')),
+    long_description='%s\n\n%s'.format(read('README.rst'), read('CHANGES.txt')),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
